@@ -1,3 +1,15 @@
+// steps:
+// Ek student management system banayein jisme:
+
+// Students ka array ho (tuple wala format: [rollNo, name, grade])
+
+// Ek function ho jo naya student add kare (check kare ke grade valid hai 0-100 nahi to never wala error throw kare)
+
+// Ek function ho jo students ki list print kare (void)
+
+// Ek function ho jo kisi student ka status update kare (enum use karein)
+
+// Unknown type use karein user input ke liye aur safely handle karein
 type studentRecord = [number, string, number]  // tuple
 
 let students: studentRecord[] = []

@@ -1,4 +1,6 @@
 "use strict";
+// steps:
+// Ek student management system banayein jisme:
 Object.defineProperty(exports, "__esModule", { value: true });
 let students = [];
 function addStudent(rollNo, name, grade) {
