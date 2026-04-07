@@ -41,6 +41,7 @@
 //     REJECTED = "rejected",
 // }
 // console.log(Status.APPROVED);
+       
 
 // Example 2:
 // enum Status{
