@@ -92,4 +92,54 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //   }
 // }
 // infiniteLoop()
+// Interface in TS:
+// Example 1:
+// interface User {
+//   name: string;
+//   email: string;
+//   password: string;
+//   gender?: string
+// }
+// function addUser(obj: User) {
+//   console.log(obj.name);
+//   console.log(obj.email);
+//   console.log(obj.password);
+//   console.log(obj.gender);
+// }
+// addUser({ name: "Ali", email: "ali@gmail.com", password: "123", gender: 'male' });
+// Example 2:
+// interface User{
+//     name: string,
+//     age: number,
+//     email?: string
+// }
+// let ali: User = {
+//     name: 'Ali',
+//     age: 24,
+//     email: 'ali@gmail.com'
+// }
+// let sara: User = {
+//     name: 'sara',
+//     age: 22
+// }
+// console.log(ali);
+// console.log(sara);
+// Extending Interfaces
+// Example 1:
+// interface User{
+//     name: string
+// }
+// interface Admin extends User{
+//     admin: boolean
+// }
+// const obj1: Admin = {
+//     name: 'umer',
+//     admin: false
+// }
+// const obj2 : Admin = {
+//     name: 'ali',
+//     admin: true
+// }
+// console.log(obj1);
+// console.log(obj2);
 //# sourceMappingURL=app.js.map
