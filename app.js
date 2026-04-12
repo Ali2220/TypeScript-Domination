@@ -17,7 +17,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // console.log(names);
 // Example 3: using 2 types (number and string in array)
 // let mixed: (number | string)[] = [12, 13, "happy"]
-// Tupes in TS
+// Tuples in TS
 // Example 1:
 // let tup: [string, number] = ["hello", 23]
 // Example 2:
