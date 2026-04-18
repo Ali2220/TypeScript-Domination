@@ -141,7 +141,7 @@
 //   console.log(obj.gender);
 // }
 
-// addUser({ name: "Ali", email: "ali@gmail.com", password: "123", gender: 'male' });
+// addUser({ name: "Ali", email: "ali@gmail.com", password: "123"});
 
 
 // Example 2:
@@ -164,7 +164,6 @@
 
 // console.log(ali);
 // console.log(sara);
-
 
 // Extending Interfaces
 
@@ -189,3 +188,53 @@
 
 // console.log(obj1);
 // console.log(obj2);
+
+
+// Type Alias in TS
+// Example 1:
+// type UserId = string | number
+
+// let id1: UserId = 'abc123'
+// let id2: UserId = 99
+
+// Example 2:
+
+// type param = string
+
+// function abcd(obj: param){
+
+// }
+
+// abcd('Ok jeee')
+
+
+// Example 3: Tuple type alias
+// type Point = [number, number]
+// let origin: Point = [10, 20]
+// console.log(origin);
+
+
+// Intersection Types
+// Example 1:
+
+// type Person = {
+//     name: string,
+//     age: number
+// }
+
+// type Employee = {
+//     employeeId: number
+//     depart: string
+// }
+
+// type EmployeeDetails = Person & Employee
+
+// let ali: EmployeeDetails = {
+//     name: 'Ali',
+//     age: 24,
+//     employeeId: 101,
+//     depart: 'Development'
+// }
+
+// console.log(ali);
+
