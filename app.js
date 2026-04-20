@@ -174,4 +174,133 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //     depart: 'Development'
 // }
 // console.log(ali);
+// Introduction to Classes and Objects in TS
+// Example 1:
+// class Device {
+//     name = "dell";
+//     price = 120000
+//     category = "laptops"
+// }
+// let d1 = new Device()
+// let d2 = new Device()
+// console.log(d1);
+// console.log(d2);
+// Constructor
+// Example 1:
+// class HumanMaker {
+//     age = 0
+//     constructor(public name: string, public isHandsome: boolean){
+//     }
+// }
+// let h1 = new HumanMaker("Ali", true)
+// let h2 = new HumanMaker("Ahsan", false)
+// console.log(h1);
+// console.log(h2);
+// Example 2:
+// class Student {
+//     name: string;
+//     age: number
+//     constructor(studentName: string, studentAge: number){
+//         this.name = studentName
+//         this.age = studentAge
+//     }
+//     introduce() {
+//         console.log(`My name is ${this.name}, my age is ${this.age}`);
+//     }
+// }
+// let s1 = new Student('Sara', 18)
+// s1.introduce()
+// Example 3: In this example we cannot access email property outside class because it is a private property, and we cannot assign any new value to id because it is readonly.
+// class User {
+//     constructor(public name: string, private email: string, readonly id: number){
+//     }
+//     getInfo(){
+//         return `Name: ${this.name}, Email: ${this.email} - ID: ${this.id}`
+//     }
+// }
+// let user1 = new User('Sarwar', 'ali@gmail.com', 21054)
+// console.log(user1.getInfo());
+// Example 4: Real Life Example (ATM Card)
+// class ATMCARD {
+//     cardNumber: string;
+//     private pin: string;
+//     balance: number
+//     constructor(cardNumber: string, pin: string, initialBalance: number) {
+//         this.cardNumber = cardNumber
+//         this.pin = pin
+//         this.balance = initialBalance
+//     }
+//     withdraw(amount: number, enteredPin: string): boolean {
+//         if (enteredPin !== this.pin) {
+//             console.log('Wrong Pin');
+//             return false
+//         }
+//         if (amount > this.balance) {
+//             console.log('Insufficient Balance');
+//             return false
+//         }
+//         this.balance -= amount
+//         console.log(`Withdrawn ${amount}. Remaining: ${this.balance}`);
+//         return true
+//     }
+// }
+// let myCard = new ATMCARD("1234", "2002", 10000)
+// myCard.withdraw(2000, "2002")
+// Access Modifiers: Public , Private, Protect
+// Public
+// class Person {
+//     public name: string
+//     age: number
+//     constructor(name: string, age: number) {
+//         this.name = name
+//         this.age = age
+//     }
+//     public introduce() {
+//         console.log(`Name: ${this.name}, Age: ${this.age} `);
+//     }
+// }
+// let p1 = new Person('Umer', 25)
+// p1.introduce()
+// Private
+// class BankAccount {
+//     public owner: string
+//     private balance: number  // sirf class ke andar access
+//     constructor(owner: string, initialBalance: number){
+//         this.owner = owner
+//         this.balance = initialBalance
+//     }
+//     deposit(amount: number){
+//         this.balance += amount
+//     }
+//     getBalance(){
+//         return this.balance
+//     }
+// }
+// let b1 = new BankAccount('Shehryar', 20000)
+// b1.deposit(10000)
+// console.log(b1.getBalance());
+// Protected
+// class Animal {
+//     public name: string
+//     protected age: number  // child classes ko milega, bahar se nahi
+//     private secret: string  // sirf Animal class ko
+//     constructor(name: string, age: number){
+//         this.name = name
+//         this.age = age
+//         this.secret = "hidden"
+//     }
+// }
+// class Dog extends Animal {
+//     private breed: string
+//     constructor(name: string, age: number, breed: string){
+//         super(name, age)
+//         this.breed = breed
+//     }
+//     showInfo(){
+//         console.log(this.name);
+//         console.log(this.age);
+//     }
+// }
+// let d1 = new Dog('PitBull', 3, 'german')
+// d1.showInfo()
 //# sourceMappingURL=app.js.map
