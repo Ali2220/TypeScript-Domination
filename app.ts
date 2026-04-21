@@ -412,3 +412,158 @@
 // let d1 = new Dog('PitBull', 3, 'german')
 // d1.showInfo()
 
+
+// Parameter Properties:
+// class User {
+//     constructor(public name: string, public age: number) {
+
+//     }
+// }
+
+
+// Getters & Setters:
+// Example 1:
+// class User {
+//     constructor(public _name: string, public age: number) {
+
+//     }
+
+//     get name(): string {
+//         return this._name
+//     }
+
+//     set name(value: string){
+//         this._name = value
+//     }
+
+// }
+
+// let u1 = new User("Ali", 24)
+// console.log(u1.name = "huzaifa");
+
+// Example 2:
+// class Person {
+//     private _name: string = ""
+//     private _age: number = 0
+
+// Getter
+//     get name(): string {
+//         return this._name
+//     }
+
+// Setter
+//     set name(value: string) {
+//         if (value.length < 2) {
+//             console.log('Name too Short');
+//         } else {
+//             this._name = value
+//         }
+//     }
+
+//     get age(): number {
+//         return this._age
+//     }
+
+//     set age(value: number) {
+//         if (value < 0 || value > 150) {
+//             console.log("Invalid Age");
+//         } else {
+//             this._age = value
+//         }
+//     }
+// }
+
+// let p = new Person()
+// p.name = "Ali"
+// console.log(p.name);
+// p.age = 24
+// console.log(p.age);
+
+// Static Members
+// Example 1:
+// class Shery {
+//     static version = 1.0
+
+//     static getRandomNumber() {
+//         return Math.random()
+//     }
+// }
+// console.log(Shery.getRandomNumber());
+// console.log(Shery.version);
+
+
+// Example 2:
+// class Math {
+//     static add(a: number, b: number): number {
+//         return a + b
+//     }
+
+//     static PI: number = 3.142
+// }
+
+// console.log(Math.add(1, 1));
+// console.log(Math.PI);
+
+
+// Example 3:
+// class School {
+//     static schoolName: string = "Chapter & Verse"
+//     private static totalStudents: number = 0
+//     private static totalTeachers: number = 0
+
+//     static addStudent() {
+//         this.totalStudents++
+//     }
+
+//     static addTeacher() {
+//         this.totalTeachers++
+//     }
+
+//     static getStats() {
+//         return `Students: ${this.totalStudents}, Teachers: ${this.totalTeachers}`
+//     }
+// }
+
+// School.addStudent();
+// School.addTeacher()
+// console.log(School.getStats());
+
+
+// Abstract Classes and Methods
+
+// // Example: 1
+// abstract class Animal {
+//     name: string
+
+//     constructor(name: string) {
+//         this.name = name
+//     }
+
+//     eat() {
+//         console.log(`${this.name} is eating`);
+//     }
+
+//     abstract makeSound(): void
+// }
+
+// class Dog extends Animal {
+// Child class ko abstract method implement karna hi padega
+//     makeSound(): void {
+//         console.log(`${this.name} says Woof Woof`);
+//     }
+// }
+
+// class Cat extends Animal {
+//     makeSound(): void {
+//         console.log(`${this.name} says meow meow`);
+//     }
+// }
+
+// let dog = new Dog("Tommy")
+// dog.eat()
+// dog.makeSound()
+
+// let cat = new Cat('Kitty')
+// cat.eat()
+// cat.makeSound()
+
